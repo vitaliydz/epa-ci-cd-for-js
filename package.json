@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./src/app/bin/www",
     "build-client": "cd client && npm run build",
-    "prod": "npm run build-client && npm start"
+    "prod": "npm run build-client && cross-env APP_PORT=3001 NODE_ENV=prod npm start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -15,5 +15,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "quotesy": "^1.0.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
