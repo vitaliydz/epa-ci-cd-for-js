@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "start": "node ./src/app/bin/www",
-    "build-client": "cd client && npm run build --prod",
+    "build-client": "cd client && npm run build",
     "prod": "npm run build-client && cross-env APP_PORT=3001 npm start",
     "dev": "nodemon npm start"
   },
