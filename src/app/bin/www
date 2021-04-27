@@ -86,3 +86,11 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+process.on('SIGINT', () => {
+  console.log('Stopping http server...');
+  server.close(() => {
+    console.log('Http server has been stopped!');
+    process.exit(0);
+  });
+});
