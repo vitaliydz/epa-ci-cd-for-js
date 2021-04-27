@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./src/app/bin/www",
-    "build-client": "cd client && npm run build",
-    "prod": "npm run build-client && cross-env APP_PORT=3001 NODE_ENV=prod npm start"
+    "build-client": "cd client && npm run build --prod",
+    "prod": "npm run build-client && cross-env APP_PORT=3001 npm start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,7 +14,8 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
-    "quotesy": "^1.0.5"
+    "quotesy": "^1.0.5",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
