@@ -6,8 +6,9 @@
     "prepare": "husky install",
     "start": "node ./src/app/bin/www",
     "build-client": "cd client && npm run build",
+    "build-client-dev": "cd client && npm run build-dev",
     "prod": "npm run build-client && cross-env APP_PORT=3001 npm start",
-    "dev": "nodemon npm start"
+    "dev": "npm run build-client-dev && nodemon npm start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
