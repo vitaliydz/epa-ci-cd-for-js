@@ -1,0 +1,30 @@
+{
+  "name": "projects",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "start": "node ./src/app/bin/www",
+    "build-client": "cd client && npm run build",
+    "build-client-dev": "cd client && npm run build-dev",
+    "prod": "npm run build-client && cross-env APP_PORT=3001 npm start",
+    "dev": "npm run build-client-dev && nodemon npm start"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "quotesy": "^1.0.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "cross-env": "^7.0.3",
+    "husky": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
